@@ -29,9 +29,72 @@
           </div>
       </nav>
   </section>
-    <main>
         <h1>Checkout</h1>
-    </main>
+    <div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php">
+  
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Enter Your First Name">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="Enter you emailId">
+              <label for="adr"><i class="fa fa-address-card-o" aria-hidden="true"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="Enter your Address">
+              <label for="city"><i class=""></i> City</label>
+              <input type="text" id="city" name="city" placeholder="Enter your City">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="Enter your EIR code">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="Enter the name on your card">
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Exp Date</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="MM/YY">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="XXX">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <input type="submit" value="Continue to checkout" class="btn">
+        </form>
+      </div>
+    </div>
+  
+    <div class="col-25">
+      <div class="container">
+        <h4>Cart
+          <span class="price" style="color:black">
+            <i class="fa fa-shopping-cart"></i>
+            <b>4</b>
+          </span>
+        </h4>
+        <p><a href="#">Product 1</a> <span class="price">€15</span></p>
+        <p><a href="#">Product 2</a> <span class="price">€5</span></p>
+        <p><a href="#">Product 3</a> <span class="price">€8</span></p>
+        <p><a href="#">Product 4</a> <span class="price">€2</span></p>
+        <hr>
+        <p>Total <span class="price" style="color:black"><b>€30</b></span></p>
+      </div>
+    </div>
+  </div>
     <footer>
       <div class="footer_main">
 
