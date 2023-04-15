@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+:root{
+    --golden : #c59d5f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.menu-title{
+    margin-top: 3rem;
+}
+.menu-title{
+    line-height:5;
+}
+
+.menu-title  span{
+    font-size: 2rem;
+    font-weight: 700;
+    width: 10%;
+    color: #182433;
+    border-bottom: 5px solid var(--golden);
+}
+section{
+  margin-top: 0rem}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+
+section nav .logo img{
+    width: 150px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    
+    width: 0;
+    height: 3px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+}
+.catagories ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 30px;
+}
+.catagories ul li {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 2px solid var(--golden);
+    border-radius: 5px;
+    color: var(--golden)
+}
+.catagories ul li:hover{
+    background-color: var(--golden);
+    color: white;
+}
+/* content */
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .c-image {
+    width: 1000px;
+    height: 160px;
+    border: 3px solid var(--golden);
+    border-radius: 5px;
+}
+.content .c-image img {
+    width: 100%;
+    height: 100%;
+}
+.content .t-n-p{
+    margin-left: 20px;
+    width: 1000px;
+}
+.content .t-n-p .header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #182433;
+  padding: 0px 5px;
+}
+.content .t-n-p .title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.content .t-n-p .price {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--golden);
+    word-spacing: 2px;
+}
+.content .t-n-p .des p{
+    font-size: 0.9rem;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 15px 0 0 12px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #fac031;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fac031;
+    border-radius: 15px;
+}
+.add-to-cart-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
