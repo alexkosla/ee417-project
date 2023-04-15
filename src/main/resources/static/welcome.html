@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali's Italian Restaraunt</title>
+    <link rel="stylesheet" href="css/Welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <img src="images/italy-sticker-flag-logo-badge-travel-souvenir-illustration_669574-150.png">
+            </div>
+           <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#orders">Orders</a></li>
+              <li><a href="#checkout">Checkout</a></li>
+              <li><a href="#About us">About us</a></li>
+            </ul>
+
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </nav>
+    <div class="main">
+
+            <div class="men_text">
+                <h1>Ali's<span>Italian Food</span><br>Fresh and tastier!!</h1>
+            </div>
+
+            <div class="main_image">
+                <img src="images/Food-Plate.png">
+            </div>
+
+        </div>
+        <p>
+           "If you believe that Italian food is the best and don't want to miss out, sign up or log in now to check out our delicious menu and start ordering!!."
+        </p>
+
+        <div class="main_btn">
+            <a href="login.html">Log in</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+           <div class="main_btns">
+            <a href="signup.html">Sign-up</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+    
+    <script>
+    // Get the navigation links
+    const navLinks = document.querySelectorAll('nav ul li a');
+    // Attach a click event listener to each navigation link
+     navLinks.forEach(link => {
+     link.addEventListener('click', (event) => {
+     // Prevent the default action of the link
+     event.preventDefault();
+     // Display a warning message
+    alert('You need to log in or sign up to access this content!');
+  });
+});
+</script>
+
+</body>
+</html>

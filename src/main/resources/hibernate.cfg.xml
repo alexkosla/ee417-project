@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Enable the logging of all the generated SQL statements to the console -->
+        <property name="show_sql">true</property>
+
+        <!-- Format the generated SQL statement to make it more readable, -->
+        <property name="format_sql">false</property>
+
+        <!-- Hibernate will put comments inside all generated SQL statements to
+        hint what’s the generated SQL trying to do -->
+        <property name="use_sql_comments">true</property>
+
+        <!-- This property makes Hibernate generate the appropriate SQL for the
+        chosen database. -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="connection.release_mode">after_transaction</property>
+
+        <!-- Hikari specific properties -->
+        <property name="connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+        <property name="hikari.dataSource.cachePrepStmts">true</property>
+        <property name="hikari.dataSource.prepStmtCacheSize">250</property>
+        <property name="hikari.dataSource.prepStmtCacheSqlLimit">2048</property>
+        <property name="hikari.dataSource.useServerPrepStmts">true</property>
+        <property name="hikari.maximumPoolSize">30</property>
+        <property name="hikari.idleTimeout">30000</property>
+
+        <!-- Database connection properties -->
+        <property name="hibernate.hikari.dataSourceClassName">com.mysql.cj.jdbc.MysqlDataSource</property>
+        <property name="hikari.dataSource.url">jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF</property>
+        <property name="hikari.dataSource.user">EE417</property>
+        <property name="hikari.dataSource.password">2023_EE417</property>
+
+        <!-- mappings for annotated classes -->
+        <mapping class="dcu.WebApp.Repository" />
+    </session-factory>
+
+</hibernate-configuration>
