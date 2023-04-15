@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Res Menu</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/Menu.css">
+    <!-- bootstrap -->
+    <link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+<section>
+	<nav id="Navbar">
+          <div class="logo">
+              <img src="C:\Users\amuru\OneDrive\Desktop\gROUP WEBAPP\italy-sticker-flag-logo-badge-travel-souvenir-illustration_669574-200.avif">
+          </div>
+
+          <ul>
+          
+              <li><a href="home.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="orders.html">Orders</a></li>
+              <li><a href="checkout.html">Checkout</a>					</li>
+              <li><a href="#About us">About us</a></li>
+          </ul>
+          
+
+          <div class="icon">
+              <i class="fa-solid fa-magnifying-glass">				  </i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+	</nav>
+    <div class="container" style="max-width: 1000px;">
+        <!-- Menu title -->
+        <div class="menu-title text-center">
+            <span>Our Menu</span>
+        </div>
+        <!-- catagories -->
+        <div class="catagories text-center">
+            <ul>
+                <li>All</li>
+                <li>Entrees</li>
+                <li>Pastas</li>
+                <li>Pizzas</li>
+                <li>From the Grill</li>
+                <li>Deserts</li>
+                <li>Wine and Beers</li>
+                <li>Beverages</li>
+            </ul>
+        </div>
+    
+        <div class="row food-container">
+            
+                <!-- content div -->
+            
+
+           
+           
+           
+        </div>
+     <footer>  
+        <div class="footer_main">
+
+        <div class="footer_tag">
+            <h2>Location</h2>
+            <p>Dublin</p>
+            <p>Donegal</p>
+            <p>Cork</p>
+            <p>Galway</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Quick Link</h2>
+            <p>Home</p>
+            <p>Menu</p>
+            <p>Orders</p>
+            <p>Checkout</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Contact</h2>
+            <p>+12e3434</p>
+            <p>+23443345345</p>
+            <p>alisitalian@gmail.com</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Our Service</h2>
+            <p>Fast Delivery</p>
+            <p>Easy Payments</p>
+            <p>24 x 7 Service</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Follow Us</h2>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+    </div>
+ </footer>
+        
+
+    </div> <!--Container ends here-->
+<!-- custom script -->
+<script src="script.js"></script>
+<!-- bootstrap scripts -->
+<script>
+
+</script>
+<script>let foodContainer = document.querySelector('.food-container');
+
+const fooditem=[
+	{
+        FoodName: "Brushetta",
+        foodimg: 'images/b1.jpg',
+        price: "$9.95 660Kcal",
+        type: "Entrees",
+        des: "Homemade basil pesto, pine nutsm parmesan cheese, olive oil & garilc with tomato served on fresh Italian bread"
+    },
+    {
+        FoodName: "Antipasta",
+        foodimg: 'images/b1.jpg',
+        price: "$11.95 720Kcal",
+        type: "Entrees",
+        des: "A selection of meats, cheese, olives sundried tomatoes, egg plant & roasted peepers, served with sour dough"
+    },
+    {
+        FoodName: "Garlic bread",
+        foodimg: 'images/b1.jpg',
+        price: "$9.95 700Kcal",
+        type: "Entrees",
+        des: "Fresh Garlic, mozzarella cheese, olive oil & oregano on fresh Italian bread"
+    },
+    {
+        FoodName: "Italian Salad",
+        foodimg: 'images/b1.jpg',
+        price: "$12.95 635Kcal",
+        type: "Entrees",
+        des: "Leattuce, tomato, cucumber,olives, red onion & pickled vegatables"
+    },
+    {
+        FoodName: "Panne Di Casa",
+        foodimg: 'images/b1.jpg',
+        price: "$12.95 635Kcal",
+        type: "Entrees",
+        des: "With olive oil, sea salts, balsamtic & fresh garlic"
+    },
+    {
+        FoodName: "Spagetti bolognase",
+        foodimg: 'images/b1.jpg',
+        price: "$14.95 940Kcal",
+        type: "Pasta",
+        des: "Spaghetti noodles and a meat-based sauce typically containing ground beef, tomatoes, onions, garlic, and herbs"
+    },
+    {
+        FoodName: "Linguine alle Vongole",
+        foodimg: 'images/b2.jpg',
+        price: "$14.95   849Kcal",
+        type: "Pasta",
+        des: "Pasta with clams, garlic, and white wine sauce"
+    },
+    {
+        FoodName: "Carboara",
+        foodimg: 'images/b2.jpg',
+        price: "$14.95   849Kcal",
+        type: "Pasta",
+        des: "Spaghetti that blends diced pork, eggs, cheese, and black pepper."
+    },
+    {
+        FoodName: "Vegitarian Carbonara",
+        foodimg: 'images/b3.jpg',
+        price: "$15.95",
+        type: "Pasta",
+        des: "Spaghetti pasta with courgettes, onions and pecorino cheese in a rich egg sauce."
+    },
+    {
+        FoodName: "Fettuccine alfredo",
+        foodimg: 'images/b3.jpg',
+        price: "$15.95",
+        type: "Pasta",
+        des: "Fresh or dried fettuccine tossed with butter and parmesan cheese until it emulsifies, creating a rich, creamy sauce."
+    },
+    {
+        FoodName: "Penne alla Arrabiata",
+        foodimg: 'images/b3.jpg',
+        price: "$15.95",
+        type: "Pasta",
+        des: "Pasta with spicy tomato sauce with a hint of basil and fresh herbs."
+    },
+    {
+        FoodName: "Pepporoni Pizza",
+        foodimg: 'images/l1.jpg',
+        price: "$16.95",
+        type: "Pizza",
+        des: "Tomato sauce, fior di latte mozzarella, parmesan, pepperoni, jalapeños, red onion"
+    },
+    {
+        FoodName: "Margarita Pizza",
+        foodimg: 'images/l2.jpg',
+        price: "$15.95",
+        type: "Pizza",
+        des: "Tomato sauce, fresh basil, fior di latte mozzarella, extra virgin olive oil"
+    },
+    {
+        FoodName: "Pizza Formaggi",
+        foodimg: 'images/l3.jpg',
+        price: "$16.95",
+        type: "Pizza",
+        des: "Mozzarella cheese, gorgonzola cheese, provolone cheese, parmigiano cheese."
+    },
+    {
+        FoodName: "Pizza Cotto E Funghi",
+        foodimg: 'images/l3.jpg',
+        price: "$16.95",
+        type: "Pizza",
+        des: "Mozzarella cheese, gorgonzola cheese, provolone cheese, parmigiano cheese."
+    },
+    {
+        FoodName: "Pizza Ortolana",
+        foodimg: 'images/l3.jpg',
+        price: "$14.95",
+        type: "Pizza",
+        des: "Mozzarella cheese, peppers, courgettes, aubergines, mushrooms, oil evo."
+    },
+    {
+        FoodName: "Pizza Napoli",
+        foodimg: 'images/l3.jpg',
+        price: "$13.90",
+        type: "Pizza",
+        des: "Tomato sauce, anchovies, cappers, olives, garlic, oregano."
+    },
+    {
+        FoodName: "16Oz Steak",
+        foodimg: 'images/l4.jpg',
+        price: "$25.00",
+        type: "Grill",
+        des: ""
+    },
+
+    {
+        FoodName: "Beef burger",
+        foodimg: 'images/s1.jpg',
+        price: "$21.00",
+        type: "Grill",
+        des: "Beef burger"
+    },
+    {
+        FoodName: "Chicken burger",
+        foodimg: 'images/s2.jpg',
+        price: "$20.00",
+        type: "Grill",
+        des: "Chicken burger"
+    },
+    {
+        FoodName: "Tiramisu",
+        foodimg: 'images/d1.jpg',
+        price: "$9.85",
+        type: "Desert",
+        des: "Classic Italian dessert with ladyfingers, mascarpone cheese, and coffee"
+    },
+    {
+        FoodName: "Cannoli",
+        foodimg: 'images/d1.jpg',
+        price: "$9.00",
+        type: "Desert",
+        des: "Crispy pastry shell filled with sweet ricotta cheese"
+    },
+
+    {
+        FoodName: "Gelato of the Day",
+        foodimg: 'images/d1.jpg',
+        price: "$9.95",
+        type: "Desert",
+        des: "Soft serverd classis Italian-style ice cream"
+    },
+
+    {
+        FoodName: "Chocolate brownie",
+        foodimg: 'images/d2.jpg',
+        price: "$9.95",
+        type: "Desert",
+        des: "Chocolate brownie"
+    },
+    {
+        FoodName: "House White",
+        foodimg: 'images/d2.jpg',
+        price: "$27",
+        type: "Wine and Beers",
+        des: "2016 Italian Pinot girgio"
+    },
+    {
+        FoodName: "Chardonnay",
+        foodimg: 'images/d2.jpg',
+        price: "$30",
+        type: "Wine and Beers",
+        des: "2016 Italian Antinort Chardonnay"
+    },
+    {
+        FoodName: "Sauvignon blanc",
+        foodimg: 'images/d2.jpg',
+        price: "$29",
+        type: "Wine and Beers",
+        des: "2013 Tenuta Maccan Sauvigon blanc"
+    },
+    {
+        FoodName: "House red ",
+        foodimg: 'images/d2.jpg',
+        price: "$27",
+        type: "Wine and Beers",
+        des: "2013 Italian Cabernet Sauvignon"
+    },
+    {
+        FoodName: "Pinot noir",
+        foodimg: 'images/d2.jpg',
+        price: "$32",
+        type: "Wine and Beers",
+        des: "2013 Brumale Vino Di Montepulciano"
+    },
+    {
+        FoodName: "Birra moretti 500mL",
+        foodimg: 'images/d2.jpg',
+        price: "$6.25",
+        type: "Wine and Beers",
+        des: ""
+    },
+    {
+        FoodName: "Guinness 500mL",
+        foodimg: 'images/d2.jpg',
+        price: "$5.25",
+        type: "Wine and Beers",
+        des: ""
+    },
+    {
+        FoodName: "Corona 330mL",
+        foodimg: 'images/d2.jpg',
+        price: "$5.10",
+        type: "Wine and Beers",
+        des: ""
+    },
+    {
+        FoodName: "Heineken 330mL",
+        foodimg: 'images/d2.jpg',
+        price: "$5.50",
+        type: "Wine and Beers",
+        des: ""
+    },
+    
+    {
+        FoodName: "Coca Cola 335mL",
+        foodimg: 'images/d2.jpg',
+        price: "$3.50",
+        type: "Beverages",
+        des: ""
+    },
+    {
+        FoodName: "Diet Coca Cola 335mL",
+        foodimg: 'images/d2.jpg',
+        price: "$3.50",
+        type: "Beverages",
+        des: ""
+    },
+    {
+        FoodName: "Sprite",
+        foodimg: 'images/d2.jpg',
+        price: "$3.50",
+        type: "Beverages",
+        des: ""
+    },
+    {
+        FoodName: "Sprite Zero",
+        foodimg: 'images/d2.jpg',
+        price: "$3.50",
+        type: "Beverages",
+        des: ""
+    },
+    {
+        FoodName: "Fanta",
+        foodimg: 'images/d2.jpg',
+        price: "$3.50",
+        type: "Beverages",
+        des: ""
+    },
+    {
+        FoodName: "Water",
+        foodimg: 'images/d2.jpg',
+        price: "$3.00",
+        type: "Beverages",
+        des: ""
+    },
+    
+    
+]
+
+
+const food = fooditem.map(item => {
+    const listitem = ` <div class="col-md-6 foodbox ${item.type}">
+    <!-- content div -->
+    <div class="content b my-2">
+        <!-- image -->
+        <div class="c-image">
+            <img src="${item.foodimg}" alt="">
+        </div>
+        <div class="t-n-p my-2">
+            <div class="header">  
+                <!-- title -->
+                <span class="title">${item.FoodName}</span>
+                <!-- price -->
+                <span class="price">${item.price}</span>
+            </div>
+            <!-- Description -->
+            <div class="des my-3 ">
+                <p>${item.des}</p>
+            </div>
+            <!-- Add to Cart button and quantity button -->
+            <!-- Add to Cart button and quantity button -->
+            <div class="quantity">
+                <input type="number" id="quantity1" name="quantity1" value="1" min="1" max="10">
+                <div class="add-to-cart">
+                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                </div>
+             </div>
+        </div>   
+    </div>
+</div>`;
+
+foodContainer.innerHTML += listitem;
+})
+const foodbox = document.querySelectorAll('.foodbox');
+const menu = document.querySelectorAll('ul');
+
+menu.forEach(m => {
+    m.addEventListener('click', e=>{
+        console.log(e.target.innerHTML)
+        foodbox.forEach(box => {
+            box.classList.add('d-none')
+            if(e.target.innerHTML === 'All')
+            {
+                box.classList.remove('d-none')
+            }
+            else if(e.target.innerHTML==='Pastas'){
+                if(box.classList.contains('Pasta'))
+                {
+                    box.classList.remove('d-none')
+                }
+                
+            }
+            else if(e.target.innerHTML==='Pizzas'){
+                if(box.classList.contains('Pizza'))
+                {
+                    box.classList.remove('d-none')
+                }
+                
+            }
+            else if(e.target.innerHTML==='From the Grill'){
+                if(box.classList.contains('Grill'))
+                {
+                    box.classList.remove('d-none')
+                }
+                
+            }
+            else if(e.target.innerHTML==='Deserts'){
+                if(box.classList.contains('Desert'))
+                {
+                    box.classList.remove('d-none')
+                }
+            }    
+            else if(e.target.innerHTML==='Entrees'){
+                if(box.classList.contains('Entrees'))
+                {
+                    box.classList.remove('d-none')
+                }
+             }
+             
+            else if(e.target.innerHTML==='Wine and Beers'){
+                if(box.classList.contains('Wine and Beers'))
+                {
+                    box.classList.remove('d-none')
+                } 
+            }  
+            
+            else if(e.target.innerHTML==='Beverages'){
+                if(box.classList.contains('Beverages'))
+                {
+                    box.classList.remove('d-none')
+                }    
+            }
+        })
+        
+    })
+})
+
+// Select all Add to Cart buttons
+const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+// Add click event listener to each button
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    // Get the selected food item details
+    const foodItem = event.target.closest('.foodbox');
+    const foodName = foodItem.querySelector('.title').textContent;
+    const foodPrice = parseFloat(foodItem.querySelector('.price').textContent.replace('$', ''));
+    const foodQuantity = foodItem.querySelector('.quantity input').value;
+    const totalPrice = (foodPrice * foodQuantity).toFixed(2);
+
+    // Display the selected food item details and quantity in a popup
+    const popupMessage = `You added ${foodQuantity} ${foodName} for a total of $${totalPrice} to your cart.`;
+    alert(popupMessage);
+  });
+});
+
+
+</script>
