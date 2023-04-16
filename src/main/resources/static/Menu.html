@@ -15,7 +15,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" r
 <section>
 	<nav id="Navbar">
           <div class="logo">
-              <img src="C:\Users\amuru\OneDrive\Desktop\gROUP WEBAPP\italy-sticker-flag-logo-badge-travel-souvenir-illustration_669574-200.avif">
+              <img src="Images/italy-sticker-flag-logo-badge-travel-souvenir-illustration_669574-150.png">
           </div>
 
           <ul>
@@ -48,7 +48,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" r
                 <li>Pizzas</li>
                 <li>From the Grill</li>
                 <li>Deserts</li>
-                <li>Wine and Beers</li>
+                <li>Wine and Beer</li>
                 <li>Beverages</li>
             </ul>
         </div>
@@ -112,284 +112,283 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" r
 <script src="script.js"></script>
 <!-- bootstrap scripts -->
 <script>
-
 </script>
 <script>let foodContainer = document.querySelector('.food-container');
 
 const fooditem=[
 	{
-        FoodName: "Brushetta",
-        foodimg: 'images/b1.jpg',
+        FoodName: "Bruschetta",
+        foodimg: 'Images/Menu/Bruschetta.jpg',
         price: "$9.95 660Kcal",
         type: "Entrees",
-        des: "Homemade basil pesto, pine nutsm parmesan cheese, olive oil & garilc with tomato served on fresh Italian bread"
+        des: "Homemade basil pesto, pine nuts parmesan cheese, olive oil & garlic with tomato served on fresh Italian bread"
     },
     {
         FoodName: "Antipasta",
-        foodimg: 'images/b1.jpg',
+        foodimg: 'Images/Menu/Antipasta.jpg',
         price: "$11.95 720Kcal",
         type: "Entrees",
         des: "A selection of meats, cheese, olives sundried tomatoes, egg plant & roasted peepers, served with sour dough"
     },
     {
         FoodName: "Garlic bread",
-        foodimg: 'images/b1.jpg',
+        foodimg: 'Images/Menu/Garlic bread.jpg',
         price: "$9.95 700Kcal",
         type: "Entrees",
         des: "Fresh Garlic, mozzarella cheese, olive oil & oregano on fresh Italian bread"
     },
     {
         FoodName: "Italian Salad",
-        foodimg: 'images/b1.jpg',
+        foodimg: 'Images/Menu/Italian salad.jpg',
         price: "$12.95 635Kcal",
         type: "Entrees",
-        des: "Leattuce, tomato, cucumber,olives, red onion & pickled vegatables"
+        des: "Lettuce, tomato, cucumber,olives,red onion & pickled vegetables"
     },
     {
         FoodName: "Panne Di Casa",
-        foodimg: 'images/b1.jpg',
+        foodimg: 'Images/Menu/Panne di casa.jpg',
         price: "$12.95 635Kcal",
         type: "Entrees",
         des: "With olive oil, sea salts, balsamtic & fresh garlic"
     },
     {
-        FoodName: "Spagetti bolognase",
-        foodimg: 'images/b1.jpg',
+        FoodName: "Bolognase",
+        foodimg: 'Images/Menu/Spagetti.jpeg',
         price: "$14.95 940Kcal",
         type: "Pasta",
         des: "Spaghetti noodles and a meat-based sauce typically containing ground beef, tomatoes, onions, garlic, and herbs"
     },
     {
         FoodName: "Linguine alle Vongole",
-        foodimg: 'images/b2.jpg',
-        price: "$14.95   849Kcal",
+        foodimg: 'Images/Menu/Linguine.jpeg',
+        price: "$14.95 849Kcal",
         type: "Pasta",
         des: "Pasta with clams, garlic, and white wine sauce"
     },
     {
-        FoodName: "Carboara",
-        foodimg: 'images/b2.jpg',
-        price: "$14.95   849Kcal",
+        FoodName: "Carbonara",
+        foodimg: 'Images/Menu/Carbonara.jpeg',
+        price: "$14.95 849Kcal",
         type: "Pasta",
         des: "Spaghetti that blends diced pork, eggs, cheese, and black pepper."
     },
     {
-        FoodName: "Vegitarian Carbonara",
-        foodimg: 'images/b3.jpg',
-        price: "$15.95",
+        FoodName: "Vegetarian Carbonara",
+        foodimg: 'Images/Menu/Veggie Carbonara.jpeg',
+        price: "$15.95 870Kcal",
         type: "Pasta",
         des: "Spaghetti pasta with courgettes, onions and pecorino cheese in a rich egg sauce."
     },
     {
         FoodName: "Fettuccine alfredo",
-        foodimg: 'images/b3.jpg',
-        price: "$15.95",
+        foodimg: 'Images/Menu/Alfredo.jpeg',
+        price: "$15.95 920Kcal",
         type: "Pasta",
         des: "Fresh or dried fettuccine tossed with butter and parmesan cheese until it emulsifies, creating a rich, creamy sauce."
     },
     {
         FoodName: "Penne alla Arrabiata",
-        foodimg: 'images/b3.jpg',
-        price: "$15.95",
+        foodimg: 'Images/Menu/Penne Alla.jpeg',
+        price: "$15.95 870Kcal",
         type: "Pasta",
         des: "Pasta with spicy tomato sauce with a hint of basil and fresh herbs."
     },
     {
-        FoodName: "Pepporoni Pizza",
-        foodimg: 'images/l1.jpg',
-        price: "$16.95",
+        FoodName: "Pepperoni Pizza",
+        foodimg: 'Images/Menu/Pepperoni.jpeg',
+        price: "$16.95 1250Kcal",
         type: "Pizza",
         des: "Tomato sauce, fior di latte mozzarella, parmesan, pepperoni, jalapeños, red onion"
     },
     {
-        FoodName: "Margarita Pizza",
-        foodimg: 'images/l2.jpg',
-        price: "$15.95",
+        FoodName: "Margherita Pizza",
+        foodimg: 'Images/Menu/Margherita.jpg',
+        price: "$15.95 1200Kcal",
         type: "Pizza",
         des: "Tomato sauce, fresh basil, fior di latte mozzarella, extra virgin olive oil"
     },
     {
         FoodName: "Pizza Formaggi",
-        foodimg: 'images/l3.jpg',
-        price: "$16.95",
+        foodimg: 'Images/Menu/Formaggi.jpeg',
+        price: "$16.95 1200Kcal",
         type: "Pizza",
         des: "Mozzarella cheese, gorgonzola cheese, provolone cheese, parmigiano cheese."
     },
     {
         FoodName: "Pizza Cotto E Funghi",
-        foodimg: 'images/l3.jpg',
-        price: "$16.95",
+        foodimg: 'Images/Menu/Fungi.jpeg',
+        price: "$16.95 1175Kcal",
         type: "Pizza",
         des: "Mozzarella cheese, gorgonzola cheese, provolone cheese, parmigiano cheese."
     },
     {
         FoodName: "Pizza Ortolana",
-        foodimg: 'images/l3.jpg',
-        price: "$14.95",
+        foodimg: 'Images/Menu/Ortolana.jpeg',
+        price: "$14.95 1250Kcal",
         type: "Pizza",
         des: "Mozzarella cheese, peppers, courgettes, aubergines, mushrooms, oil evo."
     },
     {
         FoodName: "Pizza Napoli",
-        foodimg: 'images/l3.jpg',
-        price: "$13.90",
+        foodimg: 'Images/Menu/Napoli.avif',
+        price: "$13.90 1200 Kcal",
         type: "Pizza",
         des: "Tomato sauce, anchovies, cappers, olives, garlic, oregano."
     },
     {
         FoodName: "16Oz Steak",
-        foodimg: 'images/l4.jpg',
-        price: "$25.00",
+        foodimg: 'Images/Menu/Steak.jpeg',
+        price: "$25.00 1500Kcal",
         type: "Grill",
-        des: ""
+        des: "16Oz grass feed ribeye steak served with Onion rings, chips and pepper sauce"
     },
 
     {
         FoodName: "Beef burger",
-        foodimg: 'images/s1.jpg',
-        price: "$21.00",
+        foodimg: 'Images/Menu/Beef burger.jpeg',
+        price: "$21.00 1200Kcal",
         type: "Grill",
-        des: "Beef burger"
+        des: "Locally sourced beef patty with dubliner chedder cheese, tomato, onion in a toasted brioche bun"
     },
     {
         FoodName: "Chicken burger",
-        foodimg: 'images/s2.jpg',
-        price: "$20.00",
+        foodimg: 'Images/Menu/Chicken burger.jpeg',
+        price: "$20.00 1120Kcal",
         type: "Grill",
-        des: "Chicken burger"
+        des: "Locally sourced batter chicken fillet with dubliner chedder cheese, tomato, onion in a toasted brioche bun"
     },
     {
         FoodName: "Tiramisu",
-        foodimg: 'images/d1.jpg',
-        price: "$9.85",
+        foodimg: 'Images/Menu/Tiramisu.jpeg',
+        price: "$9.85 640Kcal",
         type: "Desert",
         des: "Classic Italian dessert with ladyfingers, mascarpone cheese, and coffee"
     },
     {
         FoodName: "Cannoli",
-        foodimg: 'images/d1.jpg',
-        price: "$9.00",
+        foodimg: 'Images/Menu/Cannoli.jpeg',
+        price: "$9.00 720Kcal",
         type: "Desert",
         des: "Crispy pastry shell filled with sweet ricotta cheese"
     },
 
     {
         FoodName: "Gelato of the Day",
-        foodimg: 'images/d1.jpg',
-        price: "$9.95",
+        foodimg: 'Images/Menu/Gelato.jpeg',
+        price: "$9.95 480Kcal",
         type: "Desert",
-        des: "Soft serverd classis Italian-style ice cream"
+        des: "Soft served classic Italian-style ice cream"
     },
 
     {
         FoodName: "Chocolate brownie",
-        foodimg: 'images/d2.jpg',
-        price: "$9.95",
+        foodimg: 'Images/Menu/Brownie.jpeg',
+        price: "$9.95 820Kcal",
         type: "Desert",
-        des: "Chocolate brownie"
+        des: "Warm chocloate browned served with caramel sauce and a scoope of our famous gelato"
     },
     {
         FoodName: "House White",
-        foodimg: 'images/d2.jpg',
-        price: "$27",
-        type: "Wine and Beers",
+        foodimg: 'Images/Menu/House white.jpeg',
+        price: "$27.00",
+        type: "Wine and Beer",
         des: "2016 Italian Pinot girgio"
     },
     {
         FoodName: "Chardonnay",
-        foodimg: 'images/d2.jpg',
-        price: "$30",
-        type: "Wine and Beers",
+        foodimg: 'Images/Menu/Chardonnay.jpeg',
+        price: "$30.00",
+        type: "Wine and Beer",
         des: "2016 Italian Antinort Chardonnay"
     },
     {
         FoodName: "Sauvignon blanc",
-        foodimg: 'images/d2.jpg',
-        price: "$29",
-        type: "Wine and Beers",
+        foodimg: 'Images/Menu/Blanc.jpeg',
+        price: "$29.00",
+        type: "Wine and Beer",
         des: "2013 Tenuta Maccan Sauvigon blanc"
     },
     {
         FoodName: "House red ",
-        foodimg: 'images/d2.jpg',
-        price: "$27",
-        type: "Wine and Beers",
+        foodimg: 'Images/Menu/House red.jpeg',
+        price: "$27.00",
+        type: "Wine and Beer",
         des: "2013 Italian Cabernet Sauvignon"
     },
     {
         FoodName: "Pinot noir",
-        foodimg: 'images/d2.jpg',
-        price: "$32",
-        type: "Wine and Beers",
+        foodimg: 'Images/Menu/Pinot noir.jpeg',
+        price: "$32.00",
+        type: "Wine and Beer",
         des: "2013 Brumale Vino Di Montepulciano"
     },
     {
         FoodName: "Birra moretti 500mL",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Moretti.jpeg',
         price: "$6.25",
-        type: "Wine and Beers",
+        type: "Wine and Beer",
         des: ""
     },
     {
         FoodName: "Guinness 500mL",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Guinness.jpg',
         price: "$5.25",
-        type: "Wine and Beers",
+        type: "Wine and Beer",
         des: ""
     },
     {
         FoodName: "Corona 330mL",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Corona.jpeg',
         price: "$5.10",
-        type: "Wine and Beers",
+        type: "Wine and Beer",
         des: ""
     },
     {
         FoodName: "Heineken 330mL",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Heineken.jpeg',
         price: "$5.50",
-        type: "Wine and Beers",
+        type: "Wine and Beer",
         des: ""
     },
     
     {
         FoodName: "Coca Cola 335mL",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Coke.jpeg',
         price: "$3.50",
         type: "Beverages",
         des: ""
     },
     {
         FoodName: "Diet Coca Cola 335mL",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Diet coke.jpeg',
         price: "$3.50",
         type: "Beverages",
         des: ""
     },
     {
         FoodName: "Sprite",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Sprite.jpeg',
         price: "$3.50",
         type: "Beverages",
         des: ""
     },
     {
         FoodName: "Sprite Zero",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Sprite zero.jpeg',
         price: "$3.50",
         type: "Beverages",
         des: ""
     },
     {
         FoodName: "Fanta",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Fanta.jpeg',
         price: "$3.50",
         type: "Beverages",
         des: ""
     },
     {
         FoodName: "Water",
-        foodimg: 'images/d2.jpg',
+        foodimg: 'Images/Menu/Water.jpeg',
         price: "$3.00",
         type: "Beverages",
         des: ""
@@ -476,10 +475,10 @@ menu.forEach(m => {
                 {
                     box.classList.remove('d-none')
                 }
-             }
+            }
              
-            else if(e.target.innerHTML==='Wine and Beers'){
-                if(box.classList.contains('Wine and Beers'))
+            else if(e.target.innerHTML==='Wine and Beer'){
+                if(box.classList.contains('Wine and Beer'))
                 {
                     box.classList.remove('d-none')
                 } 
@@ -517,3 +516,238 @@ addToCartButtons.forEach(button => {
 
 
 </script>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+:root{
+    --golden : #c59d5f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.menu-title{
+    margin-top: 3rem;
+}
+.menu-title{
+    line-height:5;
+}
+
+.menu-title  span{
+    font-size: 2rem;
+    font-weight: 700;
+    width: 10%;
+    color: #182433;
+    border-bottom: 5px solid var(--golden);
+}
+section{
+  margin-top: 0rem}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+
+section nav .logo img{
+    width: 150px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    
+    width: 0;
+    height: 3px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+}
+.catagories ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 30px;
+}
+.catagories ul li {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 2px solid var(--golden);
+    border-radius: 5px;
+    color: var(--golden)
+}
+.catagories ul li:hover{
+    background-color: var(--golden);
+    color: white;
+}
+/* content */
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .c-image {
+    width: 1000px;
+    height: 160px;
+    border: 3px solid var(--golden);
+    border-radius: 5px;
+}
+.content .c-image img {
+    width: 100%;
+    height: 100%;
+}
+.content .t-n-p{
+    margin-left: 20px;
+    width: 1000px;
+}
+.content .t-n-p .header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #182433;
+  padding: 0px 5px;
+}
+.content .t-n-p .title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.content .t-n-p .price {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--golden);
+    word-spacing: 2px;
+}
+.content .t-n-p .des p{
+    font-size: 0.9rem;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 15px 0 0 12px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #fac031;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fac031;
+    border-radius: 15px;
+}
+.add-to-cart-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+</style>
+</body>
+</html>
+
