@@ -34,9 +34,12 @@
 
         <!-- Database connection properties -->
         <property name="hibernate.hikari.dataSourceClassName">com.mysql.cj.jdbc.MysqlDataSource</property>
-        <property name="hikari.dataSource.url">jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF</property>
+        <!-- <property name="hikari.dataSource.url">jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF</property>
         <property name="hikari.dataSource.user">EE417</property>
-        <property name="hikari.dataSource.password">2023_EE417</property>
+        <property name="hikari.dataSource.password">2023_EE417</property> -->
+                <property name="hikari.dataSource.url">jdbc:mysql://localhost:3306/GroupF</property>
+        <property name="hikari.dataSource.user">root</property>
+        <property name="hikari.dataSource.password">yourpasswd</property>
 
         <!-- mappings for annotated classes -->
         <mapping class="dcu.WebApp.Repository" />

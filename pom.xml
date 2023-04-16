@@ -34,11 +34,11 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>com.mysql</groupId>-->
-        <!--            <artifactId>mysql-connector-j</artifactId>-->
-        <!--            <version>8.0.32</version>-->
-        <!--        </dependency>-->
+        <dependency>
+              <groupId>com.mysql</groupId>
+                    <artifactId>mysql-connector-j</artifactId>
+                  <version>8.0.32</version>
+        </dependency>
         <!--spring-boot-starter-web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
