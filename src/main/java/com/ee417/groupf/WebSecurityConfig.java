@@ -6,6 +6,7 @@ import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -24,9 +25,12 @@ public class WebSecurityConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF");
-        dataSource.setUsername("EE417");
-        dataSource.setPassword("2023_EE417");
+        // dataSource.setUrl("jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF");
+        // dataSource.setUsername("EE417");
+        // dataSource.setPassword("2023_EE417");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/GroupF");
+        dataSource.setUsername("root");
+        dataSource.setPassword("yourpasswd");
         return dataSource;
     }
 
@@ -35,8 +39,8 @@ public class WebSecurityConfig {
     @Bean
     public JdbcUserDetailsManager jdbcUserDetailsManager(DataSource dataSource) {
         JdbcUserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
-        userDetailsManager.setUsersByUsernameQuery("SELECT username, pass, enabled FROM users WHERE username = ?");
-        userDetailsManager.setAuthoritiesByUsernameQuery("SELECT username, authority FROM users WHERE username = ?");
+        userDetailsManager.setUsersByUsernameQuery("SELECT email, password, enabled FROM user WHERE email = ?");
+        userDetailsManager.setAuthoritiesByUsernameQuery("SELECT email, authority FROM user WHERE email = ?");
         return userDetailsManager;
     }
 
@@ -48,12 +52,12 @@ public class WebSecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("").authenticated()
+                        .requestMatchers("menu.html","delivery.html","confirmation.html","orders.html","payment.html").authenticated()
                         .anyRequest().permitAll())
                 .formLogin()
                 .loginPage("/login.html").permitAll()
-                .successForwardUrl("/profile.html")
-                .defaultSuccessUrl("/profile.html",true)
+                .successForwardUrl("/home.html")
+                .defaultSuccessUrl("/home.html",true)
                 .failureUrl("/login.html")
                 .and()
                 .logout()

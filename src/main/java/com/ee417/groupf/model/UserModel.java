@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "User")
+@Table(name = "temp")
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,9 +21,11 @@ public class UserModel {
     private String email;
     private String password;
     private String authority;
-    private String enabled;
+    private boolean enabled;
 
     public UserModel() {
+        this.authority = "USER";
+        this.enabled = true;
     }
 
     public int getId() {
@@ -90,11 +92,11 @@ public class UserModel {
         this.authority = authority;
     }
 
-    public String getEnabled() {
+    public boolean getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(String enabled) {
+    public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
 
