@@ -26,8 +26,10 @@ public class MenuItemService {
         List<MenuItem> menuItemList = new ArrayList<MenuItem>();
 
         try (Connection conn = DriverManager
-                .getConnection("jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF",
-                        "EE417", "2023_EE417"))
+                // .getConnection("jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF",
+                //         "EE417", "2023_EE417"))
+                .getConnection("jdbc:mysql://localhost:3306/GroupF",
+                "root", "yourpasswd"))
         {
             PreparedStatement selectStatement = conn.prepareStatement("select * from Item");
             ResultSet rs = selectStatement.executeQuery();
@@ -60,8 +62,10 @@ public class MenuItemService {
         List<MenuItem> menuItemList = new ArrayList<MenuItem>();
 
         try (Connection conn = DriverManager
-                .getConnection("jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF",
-                        "EE417", "2023_EE417"))
+                // .getConnection("jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/GroupF",
+                //         "EE417", "2023_EE417"))
+                .getConnection("jdbc:mysql://localhost:3306/GroupF",
+                "root", "yourpasswd"))
         {
             PreparedStatement selectStatement = conn.prepareStatement("select * from Item");
             ResultSet rs = selectStatement.executeQuery();
