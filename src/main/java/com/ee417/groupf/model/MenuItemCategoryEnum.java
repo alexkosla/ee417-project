@@ -2,11 +2,11 @@ package com.ee417.groupf.model;
 
 public enum MenuItemCategoryEnum {
     All,
-    Entree,
+    Entrees,
     Pasta,
     Pizza,
     Grill,
     Dessert,
     Alcohol,
-    Beverage
+    Beverages
 }

@@ -1,7 +1,6 @@
 package com.ee417.groupf.model;
 
 import java.util.UUID;
-
 public class MenuItem {
     private int MenuItemId;
 

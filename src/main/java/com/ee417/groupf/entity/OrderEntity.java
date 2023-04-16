@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "orderTemp")
+@Table(name = "orders")
 public class OrderEntity {
     @Id
     @JsonProperty("orderId")
