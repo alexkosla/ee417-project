@@ -2,6 +2,7 @@ package com.ee417.groupf.service;
 
 import java.util.List;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.ee417.groupf.model.UserModel;
@@ -17,12 +18,18 @@ public class UserService {
 
 
     public List<UserModel> getAllUsers() {
-        return userRepository.getAllUsers();
+        return userRepository.findAll();
+    }
+
+    public UserModel getCurrentUser(String email){
+        return userRepository.findByEmail(email);
     }
 
 
     public UserModel postUser(UserModel userModel) {
-        return userRepository.postUsers(userModel);
+        String encodedPassword = new BCryptPasswordEncoder().encode(userModel.getPassword()); // Encrypt the password
+        userModel.setPassword(encodedPassword); 
+        return userRepository.save(userModel);
     }
     
 }

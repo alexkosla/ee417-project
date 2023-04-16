@@ -11,7 +11,7 @@
   <div class="container">
     <div class="registration form">
       <header>Signup</header>
-      <form action="users/postUser" method="post">
+      <form action="users/postUser" method="post" id="signup-form">
         <input type="text" id="firstname" placeholder="Enter your first name" name="firstname" required>
         <input type="text" id="lastname" placeholder="Enter your last name" name="lastname" required>
         <input type="phone" id="phone" placeholder="Enter your phone number" name="phone" required>
@@ -29,3 +29,28 @@
   </div>
 </body>
 </html>
+<script>
+const form = document.getElementById('signup-form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent the default form submit behavior
+
+  const formData = new FormData(form);
+
+  fetch('/users/postUser', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // redirect to success page
+      window.location.href = '/login.html';
+    } else {
+      // handle error
+    }
+  })
+  .catch(error => {
+    // handle error
+  });
+});
+</script>
