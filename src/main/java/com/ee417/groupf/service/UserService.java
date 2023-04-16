@@ -17,12 +17,16 @@ public class UserService {
 
 
     public List<UserModel> getAllUsers() {
-        return userRepository.getAllUsers();
+        return userRepository.findAll();
+    }
+
+    public UserModel getCurrentUser(String email){
+        return userRepository.findByEmail(email);
     }
 
 
     public UserModel postUser(UserModel userModel) {
-        return userRepository.postUsers(userModel);
+        return userRepository.save(userModel);
     }
     
 }
