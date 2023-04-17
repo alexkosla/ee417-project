@@ -152,7 +152,7 @@ foodContainer.innerHTML = "";
             <div class="quantity">
                 <input type="number" id="quantity1" name="quantity1" value="1" min="1" max="10">
                 <div class="add-to-cart">
-                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('${item.name}','${item.category}','${item.pictureLocation}','${item.price}','${item.calories}','${item.description}')">Add to Cart </button>
                 </div>
              </div>
         </div>   
@@ -162,6 +162,78 @@ foodContainer.innerHTML = "";
 foodContainer.innerHTML += listitem;
 })
 }
+async function addToCart(name,category,pictureLocation,price,calories,description){
+    // let jsonItem = JSON.stringify(item);
+    var currentdate = new Date(); 
+    var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " "
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+    const response = await fetch("http://localhost:8081/users/currentUser");
+    const user = await response.json();
+    console.log(user.id);
+
+    let orderId;
+
+    const res = await fetch("http://localhost:8081/orders/orderslist/user/" + user.id);
+    const order = await res.json();
+
+    if(order.length === 0){
+        const ordersRes = await fetch("http://localhost:8081/orders/orderslist");
+        const orders = await ordersRes.json();
+        orderId = orders.length;
+        console.log("if");
+
+        console.log(orderId);
+        
+    }
+    else{
+        orderId = order[0].orderId;
+        console.log("else");
+
+        console.log(orderId);
+        
+    }
+    
+    
+
+      
+    let temp = {
+    "orderId": parseInt(orderId),
+    "items": [
+    {
+      "name": name,
+      "quantity": 1,
+      "price": parseInt(Math.round(price)),
+      "calories": parseInt(calories),
+      "pictureLocation": pictureLocation,
+      "description": description,
+      "category": category
+    }
+    ],
+    "userId": user.id,
+    "dateTime": datetime,
+    "status": "OUT_FOR_DELIVERY",
+    "address": user.address
+  };
+  
+  fetch('http://localhost:8081/orders/post-order', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(temp)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+
+}
+
+
 const foodbox = document.querySelectorAll('.foodbox');
 const menu = document.querySelectorAll('ul');
 menu.forEach(m => {
