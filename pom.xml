@@ -51,30 +51,30 @@
             <version>8.0.0.Final</version>
         </dependency>
         <!--spring-boot-starter-test-->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
         <!--    annotations    -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>24.0.1</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency> -->
         <!--mapstruct-->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>1.5.3.Final</version>
-        </dependency>
+        </dependency> -->
         <!--lombok-->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.26</version>
-        </dependency>
+        </dependency> -->
         <!--jakarta.validation-api-->
         <dependency>
             <groupId>jakarta.validation</groupId>
@@ -82,11 +82,11 @@
             <version>3.0.2</version>
         </dependency>
         <!--mailjet-client-->
-        <dependency>
+        <!-- <dependency>
             <groupId>com.mailjet</groupId>
             <artifactId>mailjet-client</artifactId>
             <version>5.2.2</version>
-        </dependency>
+        </dependency> -->
         <!--springdoc-->
         <dependency>
             <groupId>org.springdoc</groupId>
