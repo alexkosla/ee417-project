@@ -1,12 +1,12 @@
 html{
     font-size: 20px;
-	overflow-x: hidden;
-	font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section{
     width: 100%;
-    height: 100vh;
+    height: 20vh;
 }
 section nav{
     display: flex;
@@ -23,7 +23,7 @@ section nav{
 
 
 section nav .logo img{
-    width: 500px;
+    width: 150px;
     cursor: pointer;
     margin: 4px 0;
 }
@@ -46,7 +46,7 @@ section nav ul li a{
 
 section nav ul li a::after{
     content: '';
-    
+
     width: 0;
     height: 3px;
     background: #fac031;
@@ -74,72 +74,72 @@ section nav .icon i:hover{
     color: #fac031;
 }
 .progress-bar {
-  display: flex;
-  margin-top: 100px;
-  margin-bottom: 5px;
-  justify-content: space-around;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    justify-content: space-around;
 }
- 
+
 .step {
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 25px;
-  height: 25px;
-  margin-bottom: 30px;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  background-color: #efefef;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 30px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background-color: #efefef;
 }
- 
+
 .step:after {
-  position: absolute;
-  z-index: -1;
-  top: 5px;
-  left: 22px;
-  width: 300px;
-  height: 6px;
-  content: '';
-  background-color: #efefef;
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 22px;
+    width: 300px;
+    height: 6px;
+    content: '';
+    background-color: #efefef;
 }
- 
+
 .step:before {
-  color: #2e2e2e;
-  position: absolute;
-  top: 40px;
+    color: #2e2e2e;
+    position: absolute;
+    top: 40px;
 }
- 
+
 .step:last-child:after {
-  content: none;
+    content: none;
 }
- 
+
 .step.active {
-  background-color: #f62f5e;
+    background-color: #f62f5e;
 }
 .step.active:after {
-  background-color: #f62f5e;
+    background-color: #f62f5e;
 }
 .step.active:before {
-  color: #f62f5e;
+    color: #f62f5e;
 }
 .step.active + .step {
-  background-color: #f62f5e;
+    background-color: #f62f5e;
 }
 .step.active + .step:before {
-  color: #f62f5e;
+    color: #f62f5e;
 }
- 
+
 .step:nth-child(1):before {
-  content: 'Delivery';
+    content: 'Delivery';
 }
 .step:nth-child(2):before {
-  right: -40px;
-  content: 'Payment';
+    right: -40px;
+    content: 'Payment';
 }
 .step:nth-child(3):before {
-  right: -30px;
-  content: 'Confirmation';
+    right: -30px;
+    content: 'Confirmation';
 }
 
 
