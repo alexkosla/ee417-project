@@ -117,7 +117,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" r
 <!-- bootstrap scripts -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-    fetch("http://localhost:8081/menu-items")
+    fetch("http://localhost:8081/groupf/menu-items")
       .then(response => response.json())
       .then(data => populateMenu(data))
       .catch(error => console.error(error));
@@ -176,17 +176,17 @@ async function addToCart(name,category,pictureLocation,price,calories,descriptio
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds();
 
-    const response = await fetch("http://localhost:8081/users/currentUser");
+    const response = await fetch("http://localhost:8081/groupf/users/currentUser");
     const user = await response.json();
     console.log(user.id);
 
     let orderId;
 
-    const res = await fetch("http://localhost:8081/orders/orderslist/user/" + user.id);
+    const res = await fetch("http://localhost:8081/groupf/orders/orderslist/user/" + user.id);
     const order = await res.json();
 
     if(order.length === 0){
-        const ordersRes = await fetch("http://localhost:8081/orders/orderslist");
+        const ordersRes = await fetch("http://localhost:8081/groupf/orders/orderslist");
         const orders = await ordersRes.json();
         orderId = orders.length + 1;
         console.log("if");
@@ -224,7 +224,7 @@ async function addToCart(name,category,pictureLocation,price,calories,descriptio
     "address": user.address
   };
   
-  fetch('http://localhost:8081/orders/post-order', {
+  fetch('http://localhost:8081/groupf/orders/post-order', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -245,7 +245,7 @@ menu.forEach(m => {
 
         console.log(m);
         console.log(e);
-        fetch("http://localhost:8081/menu-items-by-category?category=" + e.target.innerHTML)
+        fetch("http://localhost:8081/groupf/menu-items-by-category?category=" + e.target.innerHTML)
       .then(response => response.json())
       .then(data => populateMenu(data))
       .catch(error => console.error(error));

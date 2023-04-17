@@ -108,7 +108,7 @@
                                     <div
                                         style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
                                     </div>
-                                    <button onclick="location.href='http://localhost:8081/Confirmation.html'">Confirm Order</button>
+                                    <button onclick="location.href='http://localhost:8081/groupf/Confirmation.html'">Confirm Order</button>
                                 </td>
                             </tr>
                         </table>
@@ -132,10 +132,10 @@
 
             let total = 5.95;
 
-            const response = await fetch("http://localhost:8081/users/currentUser");
+            const response = await fetch("http://localhost:8081/groupf/users/currentUser");
             const user = await response.json();
 
-            const res = await fetch("http://localhost:8081/orders/orderslist/user/" + user.id);
+            const res = await fetch("http://localhost:8081/groupf/orders/orderslist/user/" + user.id);
             const order = await res.json();
 
             const cart = document.getElementById("cart-items");
