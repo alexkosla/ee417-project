@@ -6,7 +6,7 @@ html{
 
 section{
     width: 100%;
-    height: 100vh;
+    height: 10vh;
 }
 section nav{
     display: flex;
@@ -143,3 +143,8 @@ section nav .icon i:hover{
 }
 
 
+section nav .logo img {
+  width: 150px;
+  cursor: pointer;
+  margin: 4px 0;
+}
