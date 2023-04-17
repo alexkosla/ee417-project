@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/confirmation.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+    <title></title>
+
+
+    </div>
+    <section>
+        <nav id="Navbar">
+            <div class="logo">
+                <img src="images/italy-sticker-flag-logo-badge-travel-souvenir-illustration_669574-150.png">
+            </div>
+
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="Cart.html">Cart</a></li>
+                <!-- <li><a href="#About us">About us</a></li> -->
+            </ul>
+
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </nav>
+    </section>
+    <div class="checkout-panel">
+        <div class="panel-body">
+            <table align="center" " border=" 0" cellpadding="0" cellspacing="0" width="50%">
+                <tr>
+                    <td align="center" style="padding: 35px 35px 20px 35px; background-color: #ffffff;"
+                        bgcolor="#fffff">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                            style="max-width:600px;">
+                            <tr>
+                                <td align="center"
+                                    style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
+                                    <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png"
+                                        width="125" height="120" style="display: block; border: 0px;" /><br>
+                                    <h2
+                                        style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;">
+                                        Cart
+                                    </h2>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="left" style="padding-top: 20px;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%" id="cart-items">
+                                        <tr>
+                                            <td width="75%" align="left" bgcolor="#eeeeee"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;">
+                                                Order
+                                            </td>
+                                            <td width="25%" align="left" bgcolor="#eeeeee"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td width="75%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
+                                                Delivery
+                                            </td>
+                                            <td width="25%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
+                                                $2.95
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="75%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
+                                                Sales Tax
+                                            </td>
+                                            <td width="25%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
+                                                $ 3.00
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="padding-top: 20px;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%" id="total-table">
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="100%" valign="top" width="100%"
+                        style="padding: 0 35px 35px 35px; background-color: #ffffff;" bgcolor="#ffffff">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                            style="max-width:660px;">
+                            <tr>
+                                <td align="center" valign="top" style="font-size:0;">
+                                    <div
+                                        style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
+                                    </div>
+                                    <button onclick="location.href='http://localhost:8081/Confirmation.html'">Confirm Order</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+            </table>
+            </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function confirmOrder(){
+
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            populateCart();
+        });
+        async function populateCart() {
+
+            let total = 5.95;
+
+            const response = await fetch("http://localhost:8081/users/currentUser");
+            const user = await response.json();
+
+            const res = await fetch("http://localhost:8081/orders/orderslist/user/" + user.id);
+            const order = await res.json();
+
+            const cart = document.getElementById("cart-items");
+            const totalTable = document.getElementById("total-table");
+
+            const items = order[0].items;
+            console.log(items);
+            items.forEach((item) => {
+                let orderItems = ` <tr>
+                                            <td width="75%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                ${item.name}
+                                            </td>
+                                            <td width="25%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                $ ${item.price}
+                                            </td>
+                                        </tr>`;
+
+                cart.innerHTML += orderItems;
+                total += item.price;
+
+
+
+            });
+            let temp = `                                        <tr>
+                                            <td width="75%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
+                                                TOTAL
+                                            </td>
+                                            <td width="25%" align="left"
+                                                style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
+                                                $ ${Math.round(total*100)/100}
+                                            </td>
+                                        </tr>`;
+            totalTable.innerHTML += temp;
+
+        }
+
+    </script>

@@ -143,3 +143,8 @@ section nav .icon i:hover{
 }
 
 
+section nav .logo img {
+  width: 150px;
+  cursor: pointer;
+  margin: 4px 0;
+}

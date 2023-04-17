@@ -28,7 +28,7 @@ public class ItemEntity {
 
     @Column(name = "price")
     @JsonProperty("price")
-    private int price;
+    private float price;
     @Column(name = "calories")
     private int Calories;
     @Column(name = "pictureLocation")
@@ -42,7 +42,7 @@ public class ItemEntity {
     public ItemEntity() {
     }
 
-    public ItemEntity(Long id, OrderEntity order, String name, int quantity, int price, int calories, String pictureLocation, String description, MenuItemCategoryEnum category) {
+    public ItemEntity(Long id, OrderEntity order, String name, int quantity, float price, int calories, String pictureLocation, String description, MenuItemCategoryEnum category) {
         this.id = id;
         this.order = order;
         this.name = name;
@@ -86,11 +86,11 @@ public class ItemEntity {
         this.quantity = quantity;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
