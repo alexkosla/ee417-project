@@ -10,6 +10,7 @@ import java.util.List;
 @Table(name = "orders")
 public class OrderEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("orderId")
     private int orderId;
 
