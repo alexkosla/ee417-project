@@ -36,6 +36,10 @@ public class OrderService {
             itemEntity.setName(item.getName());
             itemEntity.setQuantity(item.getQuantity());
             itemEntity.setPrice(item.getPrice());
+            itemEntity.setCalories(item.getCalories());
+            itemEntity.setCategory(item.getCategory());
+            itemEntity.setDescription(item.getDescription());
+            itemEntity.setPictureLocation(item.getPictureLocation());
             itemEntities.add(itemEntity);
             orderEntity.addItem(itemEntity);
         }
