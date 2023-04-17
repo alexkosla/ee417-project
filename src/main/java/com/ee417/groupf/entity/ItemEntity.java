@@ -1,5 +1,6 @@
 package com.ee417.groupf.entity;
 
+import com.ee417.groupf.model.MenuItemCategoryEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -28,16 +29,29 @@ public class ItemEntity {
     @Column(name = "price")
     @JsonProperty("price")
     private int price;
+    @Column(name = "calories")
+    private int Calories;
+    @Column(name = "pictureLocation")
+    private String PictureLocation;
+    @Column(name = "description")
+    private String Description;
+    @Column(name = "category")
+    @Enumerated(EnumType.STRING)
+    private MenuItemCategoryEnum Category;
 
     public ItemEntity() {
     }
 
-    public ItemEntity(Long id, OrderEntity order, String name, int quantity, int price) {
+    public ItemEntity(Long id, OrderEntity order, String name, int quantity, int price, int calories, String pictureLocation, String description, MenuItemCategoryEnum category) {
         this.id = id;
         this.order = order;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
+        Calories = calories;
+        PictureLocation = pictureLocation;
+        Description = description;
+        Category = category;
     }
 
     public Long getId() {
@@ -78,5 +92,37 @@ public class ItemEntity {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getCalories() {
+        return Calories;
+    }
+
+    public void setCalories(int calories) {
+        Calories = calories;
+    }
+
+    public String getPictureLocation() {
+        return PictureLocation;
+    }
+
+    public void setPictureLocation(String pictureLocation) {
+        PictureLocation = pictureLocation;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public MenuItemCategoryEnum getCategory() {
+        return Category;
+    }
+
+    public void setCategory(MenuItemCategoryEnum category) {
+        Category = category;
     }
 }
