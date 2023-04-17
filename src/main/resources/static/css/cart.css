@@ -1,0 +1,23 @@
+button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4CAF50;
+}
+
+section nav .logo img {
+    width: 150px;
+    cursor: pointer;
+    margin: 4px 0;
+}
