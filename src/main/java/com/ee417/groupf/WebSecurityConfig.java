@@ -52,11 +52,7 @@ public class WebSecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(auth -> auth
-<<<<<<< HEAD
                         .requestMatchers("Menu.html","delivery.html","confirmation.html","orders.html","payment.html","Cart.html","menu.html").authenticated()
-=======
-                        .requestMatchers("Menu.html","delivery.html","confirmation.html","orders.html","payment.html").authenticated()
->>>>>>> 08bd61b (changes)
                         .anyRequest().permitAll())
                 .formLogin()
                 .loginPage("/login.html").permitAll()
