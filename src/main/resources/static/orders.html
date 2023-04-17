@@ -37,7 +37,7 @@
 <div id="ordersContainer"></div>
 
 <script>
-  fetch('http://localhost:8080/orders/orderslist')
+  fetch('http://localhost:8081/orders/orderslist')
           .then(response => response.json())
           .then(data => {
             let orders = data;
